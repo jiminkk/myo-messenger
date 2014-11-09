@@ -1,0 +1,7 @@
+body {
+	background-color: lightblue;
+	text-align:center;
+}
+h1   {color:black}
+input{border:1px solid grey;
+  		padding:10px;}
