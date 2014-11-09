@@ -5,6 +5,7 @@
 
 //text = "adqwd ! $"
 
+// morse_dict is a dictionary of morse codes and their corresponding letters
 var morse_dict = {
 	'a': ".-", 
 	'b': "-...", 
@@ -51,11 +52,12 @@ var morse_dict = {
 };
 
 var valueList = [];	
-//var key = "";				// list of values of morse_dict
+// list of values of morse_dict
 for (var key in morse_dict){
 	valueList.push(morse_dict[key]);
 }
 
+// find key in the dictionary
 function find_key(dic, val){
 	for (var key in dic){
 		if (dic[key] == val){
@@ -64,6 +66,7 @@ function find_key(dic, val){
 	}
 }
 
+// check if key exists
 function has_key(dic, val){
 	key_list = Object.keys(dic);
 	for (var key in key_list){
@@ -78,6 +81,7 @@ function has_key(dic, val){
 	return false;
 }
 
+// this is the function we call
 function blahblah(arg){
 	var text = arg.toLowerCase();
 
@@ -91,6 +95,7 @@ function blahblah(arg){
 
 }
 
+// if text is morse, execute this function
 function morseCodeDetected(morse){
 	//if (tom == false){
 		var newstring = "\nMorse code detected! Translation from morse code:\n";
@@ -117,6 +122,7 @@ function morseCodeDetected(morse){
 	document.getElementById("morse2eng").value = newstring;
 }
 
+// if text is detected, run this function
 function textDetected(text){
 	//console.log("2");
 	//else{
